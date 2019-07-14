@@ -1,0 +1,13 @@
+# docker build -t tinyproxy .
+version: '2'
+services:
+  tinyproxy:
+    image: tinyproxy
+    container_name: tinyproxy
+    hostname: tinyproxy
+    restart: always
+    volumes:
+    - ./custom.conf:/etc/tinyproxy.conf
+    tty: true
+    ports:
+      - 8888:8888
