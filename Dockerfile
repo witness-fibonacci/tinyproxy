@@ -28,7 +28,7 @@ RUN adduser -D -u 2000 -h /var/run/tinyproxy -s /sbin/nologin tinyproxy tinyprox
 
 COPY tinyproxy.conf /etc/tinyproxy.conf
 COPY docker-entrypoint.sh /docker-entrypoint.sh
-
+RUN chmod +x /docker-entrypoint.sh
 USER tinyproxy
 
 EXPOSE 8888
