@@ -2,7 +2,7 @@
 version: '2'
 services:
   tinyproxy:
-    image: tinyproxy
+    image: w3fibonacci/tinyproxy
     container_name: tinyproxy
     hostname: tinyproxy
     restart: always
